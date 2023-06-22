@@ -1,42 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+  user-select: none;
+  background-color: #8d8d8d;
+  font-family: 'Russo One', sans-serif;
+  display: block;
+  margin: 8px;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+element.style {
+  background-color: grey;
+  margin-top: 10px;
+  box-shadow: black 3px 3px 5px;
+}
+
+.inner-container {
+  outline: 5px solid orange;
+  position: relative;
+  width: 660px;
   text-align: center;
+  background-color: #b3b3b3;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.inner-container .pad-bank {
+  width: 332px;
+  height: 272px;
+  display: inline-block;
+  margin: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inner-container .pad-bank .drum-pad {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding-top: 35px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.inner-container .pad-bank .drum-pad {
+  background-color: gray;
+  margin-top: 10px;
+  box-shadow: black 3px 3px 5px;
 }
 
-.card {
-  padding: 2em;
+.inner-container .pad-bank .drum-pad:active {
+  background-color: orange;
+  margin-top: 13px;
+  box-shadow: orange 0px 3px 5px;
+  height: 77px;
 }
 
-.read-the-docs {
-  color: #888;
+.inner-container .pad-bank .drum-pad.active {
+  background-color: orange;
+  margin-top: 13px;
+  box-shadow: orange 0px 3px;
+  height: 77px;
 }
+
+.inner-container .pad-bank .drum-pad.inactive {
+  background-color: gray;
+  margin-top: 13px;
+  box-shadow: gray 0px 3px;
+  height: 77px;
+}
+
+audio:not([controls]) {
+  display: none !important;
+}
+
+audio {
+  width: 300px;
+  height: 54px;
+}
+
+.inner-container .controls-container {
+  width: 240px;
+  height: 272px;
+  display: inline-block;
+  margin: 40px 20px 0 10px;
+  vertical-align: top;
+}
+
+.inner-container .controls-container .control {
+  width: 100px;
+  margin: auto;
+}
+
+.inner-container .controls-container .control p {
+  margin-bottom: 0;
+}
+
+.outer-select, .inner-container .controls-container .control .select {
+  margin: auto;
+  border: 1px solid black;
+  width: 50px;
+  height: 20px;
+  padding: 1px;
+  background-color: black;
+}
+
+.inner-select, .inner-container .controls-container .control .select .inner {
+  width: 23px;
+  height: 19px;
+  background: blue;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.inner-container .controls-container #display {
+  width: 200px;
+  height: 50px;
+  background-color: gray;
+  margin: 15px auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+
+/* input[type='range'] {
+  -webkit-appearance: none;
+  margin: 12.5px 0;
+  width: 100%;
+}
+
+input[type="range"] {
+  writing-mode: horizontal-tb !important;
+}
+
+input[type="range" i] {
+  appearance: auto;
+  cursor: default;
+  color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+  padding: initial;
+  border: initial;
+  margin: 2px;
+} */
+
+.volume-slider {
+  width: 100%;
+  margin: 12.5px 0;
+}
+
+.volume-slider input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background-color: #4A4A4A;
+  outline: none;
+  box-shadow: 1px 1px black;
+}
+
+.volume-slider input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 9px;
+  height: 27px;
+  background-color: #0000FF;
+  cursor: pointer;
+  border: 2px #424242;
+  box-shadow: 1px 1px black;
+}
+
+
+.volume-slider input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: #0000FF;
+  cursor: pointer;
+  border: #424242;
+
+}
+
+.volume-slider input[type='range']::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: 0000FF;
+  cursor: pointer;
+  border: #424242;
+
+}
+
