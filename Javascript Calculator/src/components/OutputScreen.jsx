@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-function OutputScreen() {
+function OutputScreen({ input }) {
+
+    const [output, setOutput] = useState('');
+
+    useEffect(() => {
+        setOutput(input);
+    }, [input])
+
+
+    console.log(typeof(output));
   return (
-    <div className='outputScreen'>OutputScreen</div>
+    <div className='outputScreen'>{output || '0'}</div>
   )
 }
 

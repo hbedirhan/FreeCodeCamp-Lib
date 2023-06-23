@@ -1,8 +1,8 @@
 import React from 'react'
 
-function FormulaScreen() {
+function FormulaScreen({ input }) {
   return (
-    <div className='formulaScreen'>FormulaScreen</div>
+    <div className='formulaScreen'>{input}</div>
   )
 }
 

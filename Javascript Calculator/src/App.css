@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 body {
-    background: #c2c2d6;
+    background: #4d4d4d;
     -webkit-touch-callout: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -30,7 +32,7 @@ body {
 
 .formulaScreen {
     min-height: 20px;
-    font-family: digital;
+    font-family: 'Orbitron', sans-serif;
     font-size: 20px;
     color: orange;
     text-align: right;
@@ -42,7 +44,7 @@ body {
 
 .outputScreen {
     font-size: 29px;
-    font-family: digital;
+    font-family: 'Orbitron', sans-serif;
     color: white;
     text-align: right;
     line-height: 35px;
@@ -60,7 +62,7 @@ button {
     outline: 1px solid black;
     border: none;
     background: #4d4d4d;
-    font-family: Share Tech Mono, monospace;
+    font-family: 'Orbitron', sans-serif;
     font-size: 20px;
     cursor: default;
 }
@@ -69,7 +71,7 @@ button:hover {
     color: black;
     border: 5px;
     border: white;
-    box-shadow: 5px 6px 10px 0 rgb(0, 0, 0.24), 5px 6px 10px 0 rgb(0, 0, 0.24);
+    box-shadow: 5px 6px 10px rgb(0, 0, 0.24), 5px 6px 10px rgb(0, 0, 0.24);
 }
 
 button:active {
